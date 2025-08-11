@@ -21,6 +21,13 @@ def main():
     # Mostrar tareas
     print("\nTareas actuales:")
     task_manager.list_tasks()
+    
+    # Ejemplo de marcar una tarea como completada
+    print("\n--- Marcando tarea 1 como completada ---")
+    task_manager.mark_as_complete(1)
+    
+    print("\nTareas después de marcar como completada:")
+    task_manager.list_tasks()
 
 if __name__ == "__main__":
     main()

@@ -39,3 +39,14 @@ class TaskModel:
             if task['id'] == task_id:
                 return task
         return None
+    
+    def mark_as_complete(self, task_id):
+        """Marcar una tarea como completada"""
+        task = self.get_task_by_id(task_id)
+        if task:
+            task['completed'] = True
+            print(f"Tarea {task_id} marcada como completada: {task['description']}")
+            return True
+        else:
+            print(f"No se encontró la tarea con ID {task_id}")
+            return False
