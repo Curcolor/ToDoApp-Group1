@@ -1,0 +1,66 @@
+# Informe del Grupo 1
+
+1. Pasos realizados:
+- Creamos el repositorio ToDoApp-Group1 en GitHub y agregamos a los miembros como colaboradores.
+- Inicializamos el proyecto con main.py, task_model.py y .gitignore en la rama main.
+- Cada miembro creó su rama (Daniela creo 2 ramas,  Jairo creo una rama) y trabajó en su funcionalidad asignada.
+- Daniela añadió la funcionalidad para marcar tareas como completadas en task_model.py y actualizó main.py.
+- Daniela añadió la funcionalidad para eliminar tareas en task_model.py y actualizó el README.md.
+- Jairo simuló cambios conflictivos en task_model.py y main.py.
+- Creamos la rama group-1, fusionamos las ramas de daniela sin conflictos.
+- Al fusionar la rama de jairo en group-1, surgieron conflictos que resolvimos manteniendo is_completed como atributo y combinando los métodos.
+- Realizamos el Pull Request desde group-1 hacia main y lo fusionamos.
+- Eliminamos las ramas individuales y la de grupo.
+
+2. Comandos Git:
+- git clone <URL>: Clonar el repositorio.
+- git checkout -b <rama>: Crear nueva rama.
+- git add <archivo>: Añadir cambios al área de preparación.
+- git commit -m "mensaje": Guardar cambios en la rama actual.
+- git push origin <rama>: Subir cambios al repositorio remoto.
+- git merge <rama>: Fusionar una rama en la actual.
+- git push origin --delete <rama>: Eliminar rama remota.
+- git fetch origin: Traer actualizaciones del remoto.
+- git log --oneline --graph --all: Ver historial de commits.
+
+3. Conflictos:
+- Conflicto en task_model.py entre is_completed/is_done y métodos mark_as_complete/set_done, así como remove_task.
+- Conflicto en main.py por diferencias en las llamadas a los métodos.
+- Solución: Mantuvimos is_completed como atributo principal, combinamos mark_as_complete y set_done, y unimos las funcionalidades de remove_task y delete_task.
+
+4. Contribuciones:
+- Daniela: Añadió mark_as_complete en task_model.py y actualizó main.py.
+- Daniela: Añadió delete_task en task_model.py y actualizó README.md.
+- Jairo: Añadió set_done y remove_task, simuló conflicto y lo resolvió.
+
+5. Reflexiones:
+- Aprendimos a coordinar el trabajo usando ramas individuales y revisando cambios antes de fusionar.
+- La resolución de conflictos en Git requiere atención y comunicación para no perder cambios importantes.
+- Los Pull Requests son esenciales para revisar código y evitar problemas en la rama principal.
+- Usar Git de forma colaborativa nos permitió trabajar en paralelo sin sobrescribir el trabajo de otros.
+- Herramientas como CI/CD podrían automatizar pruebas y revisiones, mejorando el flujo de trabajo.
+
+
+6. Preguntas de reflexión:
+- ¿Cómo coordinaron el trabajo en equipo para evitar conflictos innecesarios?
+ Hablamos por chat y asignamos las funcionalidades a cada miembro para trabajar en partes distintas del trabajo.
+- ¿Qué aprendieron sobre la resolución de conflictos en Git?
+Que tenemos que entender el código de cada compañero para lograr unir los cambios sin perder funcionalidades.
+- ¿Por qué es importante usar Pull Requests en proyectos colaborativos?
+  Es importante ya que estos permiten revisar y discutir cambios antes de integrarlos a la rama principal.
+- ¿Cómo podría mejorarse el flujo de trabajo con herramientas como CI/CD?
+Se utilizarían las herramientas planteadas para así automatizar los despliegues en cada nuevo cambio.
+
+7. Historial de commits:
+(Representación con git log --oneline --graph --all)
+*   87062e3 (HEAD -> main) Resolver conflictos al fusionar rama jairo-conflictive
+|\
+| * 3df2966 Añadir métodos set_done y remove_task
+* |   422c80b Resolver conflicto al fusionar rama daniela-delete-task
+|\ \
+| * | cbf2b23 Añadir funcionalidad para eliminar tareas
+| |/
+* / cf67821 Añadir funcionalidad para marcar tareas como completadas
+|/
+* a608485 Inicializar proyecto ToDoApp con archivos base
+* fa5d46c (origin/main) first commit
