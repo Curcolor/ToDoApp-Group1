@@ -21,6 +21,19 @@ def main():
     # Mostrar tareas
     print("\nTareas actuales:")
     task_manager.list_tasks()
+    
+    # Ejemplo usando los métodos de Jairo
+    print("\n--- Marcando tarea 1 como terminada ---")
+    task_manager.set_done(1)
+    
+    print("\nTareas después de marcar como terminada:")
+    task_manager.list_tasks()
+    
+    print("\n--- Removiendo tarea 2 ---")
+    task_manager.remove_task(2)
+    
+    print("\nTareas después de remover:")
+    task_manager.list_tasks()
 
 if __name__ == "__main__":
     main()
