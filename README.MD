@@ -7,7 +7,8 @@ Una aplicación simple de gestión de tareas desarrollada colaborativamente por 
 - Añadir nuevas tareas
 - Listar tareas existentes
 - Marcar tareas como completadas
-- Eliminar tareas
+- Eliminar tareas por ID
+- Buscar tareas por ID
 
 ## Uso
 

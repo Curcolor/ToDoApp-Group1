@@ -50,3 +50,14 @@ class TaskModel:
         else:
             print(f"No se encontró la tarea con ID {task_id}")
             return False
+    
+    def delete_task(self, task_id):
+        """Eliminar una tarea por su ID"""
+        task = self.get_task_by_id(task_id)
+        if task:
+            self.tasks.remove(task)
+            print(f"Tarea {task_id} eliminada: {task['description']}")
+            return True
+        else:
+            print(f"No se encontró la tarea con ID {task_id}")
+            return False
