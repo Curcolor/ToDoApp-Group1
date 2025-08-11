@@ -17,7 +17,7 @@ class TaskModel:
         task = {
             'id': self.next_id,
             'description': description,
-            'completed': False
+            'is_completed': False  # Usando is_completed como atributo principal
         }
         self.tasks.append(task)
         self.next_id += 1
@@ -30,7 +30,7 @@ class TaskModel:
             return
         
         for task in self.tasks:
-            status = "✓" if task['completed'] else "○"
+            status = "✓" if task['is_completed'] else "○"  # Usando is_completed
             print(f"{status} [{task['id']}] {task['description']}")
     
     def get_task_by_id(self, task_id):
@@ -44,12 +44,16 @@ class TaskModel:
         """Marcar una tarea como completada"""
         task = self.get_task_by_id(task_id)
         if task:
-            task['completed'] = True
+            task['is_completed'] = True
             print(f"Tarea {task_id} marcada como completada: {task['description']}")
             return True
         else:
             print(f"No se encontró la tarea con ID {task_id}")
             return False
+    
+    def set_done(self, task_id):
+        """Marcar una tarea como terminada (método alternativo de Jairo)"""
+        return self.mark_as_complete(task_id)  # Redirige al método principal
     
     def delete_task(self, task_id):
         """Eliminar una tarea por su ID"""
@@ -61,3 +65,7 @@ class TaskModel:
         else:
             print(f"No se encontró la tarea con ID {task_id}")
             return False
+    
+    def remove_task(self, task_id):
+        """Remover una tarea por su ID (método alternativo de Jairo)"""
+        return self.delete_task(task_id)  # Redirige al método principal
